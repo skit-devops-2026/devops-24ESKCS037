@@ -23,3 +23,7 @@ echo "Signup page tests passed."
 grep -q 'id="notes"' frontend/patient/notifications.html
 
 echo "Notifications page test passed."
+
+grep -q 'id="markAll"' frontend/patient/notifications.html
+
+echo "Mark all button test passed."
