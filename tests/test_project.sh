@@ -20,6 +20,6 @@ grep -q 'js/auth.js' frontend/signUp.html
 
 echo "Signup page tests passed."
 
-grep -q 'id="wrongNotes"' frontend/patient/notifications.html
+grep -q 'id="notes"' frontend/patient/notifications.html
 
 echo "Notifications page test passed."
