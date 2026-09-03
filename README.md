@@ -1,18 +1,25 @@
 
-Replace every angle-bracket placeholder below. The hygiene check in CI will fail until you do.
+# MedCare
 
-Author
-Roll No. 24ESKCS037	Name Akshita Yadav	GitHub username AkshitaYadav16
-About
-Tech stack
-Frontend: html css js
-Backend: 
-Database: 
-Running locally
+## Author
+
+| Roll No. | Name | GitHub username |
+|---|---|---|
+| 24ESKCS037 | Akshita Yadav | AkshitaYadav16|
+
+## About
+
+MedCare is a healthcare web application designed to help users manage and access healthcare-related services through a simple web interface. It provides a convenient platform for users to interact with healthcare features and manage their information.
+
+## Tech stack
+
+- Frontend: HTML, CSS, JavaScript
+- Backend: Node.js / Express
+- Database: MongoDB
+
+## Running locally
+
+```bash
 make install
-make run
-Live URL
-<Add once M5 is done. Until then, leave as is.>
 
-Health endpoint
-GET /health returns the running commit SHA. See Makefile and the milestone sheet for why this is required.
+make run
