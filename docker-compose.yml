@@ -1,0 +1,9 @@
+
+services:
+  medcare:
+    build: .
+    image: medcare-app:1.0
+    container_name: medcare-container
+    ports:
+      - "8081:80"
+    restart: unless-stopped
