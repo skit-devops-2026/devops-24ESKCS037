@@ -3,19 +3,39 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: medcare-deployment
+  labels:
+    app: medcare
+
 spec:
   replicas: 2
+
   selector:
     matchLabels:
       app: medcare
+
   template:
     metadata:
       labels:
         app: medcare
+
     spec:
+      imagePullSecrets:
+        - name: ghcr-secret
+
       containers:
         - name: medcare
-          image: medcare-app:1.0
-          imagePullPolicy: IfNotPresent
+          image: ghcr.io/skit-devops-2026/devops-24eskcs037:b370f8fa5dfbc4a717dffbf7b67bd88e7a239a7a
+          imagePullPolicy: Always
+
           ports:
-            - containerPort: 80
+            - name: http
+              containerPort: 80
+              protocol: TCP
+
+          resources:
+            requests:
+              cpu: "100m"
+              memory: "64Mi"
+            limits:
+              cpu: "500m"
+              memory: "256Mi"
