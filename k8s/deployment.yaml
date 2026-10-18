@@ -1,0 +1,21 @@
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: medcare-deployment
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: medcare
+  template:
+    metadata:
+      labels:
+        app: medcare
+    spec:
+      containers:
+        - name: medcare
+          image: medcare-app:1.0
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 80
