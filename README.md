@@ -23,3 +23,7 @@ MedCare is a healthcare web application designed to help users manage and access
 make install
 
 make run
+
+#Live URL 
+
+https://medcare-app-a89t.onrender.com
